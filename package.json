@@ -2,18 +2,31 @@
   "name": "person-web",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "web-norm": "web-norm",
+    "commit": "git add . && git-cz",
+    "commit:all": "git add . && git-cz",
+    "postinstallmac": "git config core.hooksPath .husky && chmod 700 .husky/*",
+    "prettierwrite": "prettier --write src/**/*.{vue,ts,js,tsx,jsx}",
+    "prettiercheck": "prettier --check src/**/*.{vue,ts,js,tsx,jsx}",
+    "eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,js,tsx}\" --fix"
   },
   "dependencies": {
     "vue": "^3.5.12",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^19.6.0",
     "@vitejs/plugin-vue": "^5.1.4",
+    "eslint": "^7.25.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
     "naive-ui": "^2.40.2",
     "sass": "^1.81.0",
     "sass-loader": "^16.0.3",
@@ -22,6 +35,30 @@
     "unplugin-vue-components": "^0.27.4",
     "vfonts": "^0.0.3",
     "vite": "^5.4.10",
-    "vue-tsc": "^2.1.8"
+    "vue-tsc": "^2.1.8",
+    "web-norm": "^1.1.8",
+    "prettier": "^2.7.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-vue": "^9.21.1",
+    "@typescript-eslint/parser": "^5.30.7",
+    "@commitlint/config-angular": "^17.0.3",
+    "commitizen": "^4.2.4",
+    "cz-customizable": "^6.9.0",
+    "@commitlint/cz-commitlint": "^17.0.3",
+    "inquirer": "^8.0.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,jsx,tsx}": [
+      "eslint --cache --fix"
+    ],
+    "*.{js,jsx,ts,tsx,md,html,css,lees,scss,sass}": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   }
 }
