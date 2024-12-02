@@ -1,5 +1,29 @@
-# Vue 3 + TypeScript + Vite
+# 欢迎来到我的个人网站
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+这里是我记录和分享所思所想的地方，不定期更新，涵盖技术、生活等多个领域。希望我的分享能给你带来一些启发。
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 内容分类
+
+### 技术探索
+
+暂无
+
+### 游戏直播动态
+
+暂无
+
+## 更新计划
+
+- [x] 添加 404 页面
+- [x] 添加个人简介
+- [x] 添加联系方式
+- [ ] 完善个人网站首页内容
+
+## 联系方式
+
+- **GitHub**：[[jidixueqiao](https://github.com/jidixueqiao)]
+- **b 站账号**：[[极地雪橇]](https://space.bilibili.com/21432300)
+
+---
+
+感谢你的访问，期待与你交流！
