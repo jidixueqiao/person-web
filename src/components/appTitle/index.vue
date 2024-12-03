@@ -1,6 +1,8 @@
 <template>
   <div class="app-title">
-    <RouterLink class="app-title-item" :to="tab.path" v-for="tab in tabs" :key="tab.title">{{ tab.title }}</RouterLink>
+    <RouterLink v-for="tab in tabs" :key="tab.title" class="app-title-item" :to="tab.path">{{
+      tab.title
+    }}</RouterLink>
   </div>
 </template>
 
@@ -9,7 +11,7 @@
 import { AppTitleProps } from './models'
 
 defineOptions({
-  name: 'AppTitle',
+  name: 'AppTitle'
 })
 
 defineProps<AppTitleProps>()
@@ -17,17 +19,17 @@ defineProps<AppTitleProps>()
 
 <style lang="scss" scoped>
 .app-title {
+  text-align: center;
+  border-bottom: 1px solid #fff;
+
   .app-title-item {
     padding: 8px;
     display: inline-block;
     text-decoration: none;
     color: #fff;
     transition: all 0.5s;
-
-    &.router-link-active {
-      background-color: #63e2b729;
-      color: #63e2b7;
-    }
+    width: 120px;
+    text-align: center;
   }
 }
 </style>
